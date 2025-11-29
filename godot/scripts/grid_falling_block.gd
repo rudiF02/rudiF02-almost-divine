@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #to put in config file
-const TILE_SIZE = 32
+const TILE_SIZE = 16
 const TICK_SPEED = 0.5
 const FAST_DROP_SPEED = 0.05
 

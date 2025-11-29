@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://vsj0ca6ifthk"]
+[gd_scene load_steps=7 format=3 uid="uid://vsj0ca6ifthk"]
 
 [ext_resource type="Script" uid="uid://cm58x12yxfdvu" path="res://scripts/player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://csklof614qbeo" path="res://Asset/player_sprites.png" id="2_g2els"]
 [ext_resource type="Script" uid="uid://c2kr1loc1b7ml" path="res://scenes/camera_2d.gd" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://eg58vjsjnt44" path="res://scenes/block_spawner.tscn" id="4_qlg0r"]
 
@@ -21,7 +20,6 @@ z_index = 1
 script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g2els")
 hframes = 4
 vframes = 3
 

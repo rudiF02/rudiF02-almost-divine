@@ -24,3 +24,7 @@ texture = ExtResource("2_vfh2s")
 position = Vector2(10.936177, 13.194365)
 scale = Vector2(0.99609387, 1.001302)
 polygon = PackedVector2Array(4.0797586, -60.116096, 4.0797586, 3.8006878, 36.205246, 3.8006878, 36.205246, 33.76168, -26.037888, 33.76168, -26.037888, -60.116096)
+
+[node name="RayCast2D" type="RayCast2D" parent="CollisionPolygon2D" index="0"]
+position = Vector2(5.0836806, 34.760376)
+target_position = Vector2(0, 9.986996)

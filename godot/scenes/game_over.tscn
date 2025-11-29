@@ -45,10 +45,10 @@ text = "GAME OVER"
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 7.0
-offset_right = 24.0
-offset_bottom = 15.0
+offset_left = 16.307343
+offset_top = 26.797699
+offset_right = 24.307344
+offset_bottom = 34.7977
 
 [node name="Label" type="Label" parent="Control/Button"]
 layout_mode = 0
@@ -59,4 +59,22 @@ offset_bottom = 25.0
 scale = Vector2(0.1060901, 0.12825212)
 text = "QUIT"
 
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 3.5942717
+offset_top = 5.021791
+offset_right = 11.594272
+offset_bottom = 13.021791
+scale = Vector2(4.072935, 1.056723)
+
+[node name="Label" type="Label" parent="Control/Button2"]
+layout_mode = 0
+offset_left = 0.14707948
+offset_top = 0.29438597
+offset_right = 67.14708
+offset_bottom = 23.294386
+scale = Vector2(0.11680964, 0.30717796)
+text = "RESTART"
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_restart_button_pressed"]

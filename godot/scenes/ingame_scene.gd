@@ -20,3 +20,4 @@ func _input(event) -> void:
 		
 func _save_game() -> void:
 	SaveGame.save_game(get_tree())
+	

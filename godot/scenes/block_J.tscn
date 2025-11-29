@@ -21,4 +21,4 @@ position = Vector2(-32, 32)
 texture = ExtResource("2_mqetu")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="4"]
-polygon = PackedVector2Array(-16, -48, 16, -48, 16, 48, -48, 48, -48, 16, -16, 16)
+polygon = PackedVector2Array(-15, -48, 15, -48, 15, 48, -47, 48, -47, 16, -15, 16)

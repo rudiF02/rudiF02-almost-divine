@@ -1,10 +1,8 @@
 extends Camera2D
 
-# Adjust this to the horizontal center of your map (e.g., 0 or 160)
 @export var fixed_x_position: float = 0.0
 
-# The exact width of your map in pixels.
-@export var target_map_width: float = 160.0
+@export var target_map_width: float = 320.0
 
 # Drag your BlockSpawner node here in the Inspector
 @onready var spawner_node: Node2D = $BlockSpawner
@@ -26,7 +24,7 @@ func _ready():
 		# Calculate the height of the visible world area
 		var visible_world_height = viewport_rect.y / zoom_factor
 		
-		var top_edge_y = -(visible_world_height / 2.0) - 64.0
+		var top_edge_y = -(visible_world_height * 3) - 64.0
 		
 		spawner_node.position = Vector2(0, top_edge_y)
 		

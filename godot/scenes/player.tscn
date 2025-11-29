@@ -17,6 +17,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -34,11 +35,10 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
-offset = Vector2(0, -100)
+offset = Vector2(0, -160)
 ignore_rotation = false
-zoom = Vector2(1.5, 1.5)
+limit_enabled = false
 script = ExtResource("3_dqkch")
 
 [node name="BlockSpawner" parent="Camera2D" instance=ExtResource("4_qlg0r")]

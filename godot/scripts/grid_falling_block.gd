@@ -27,11 +27,11 @@ func _physics_process(delta):
 func _unhandled_input(event):
 	if current_state != State.FALLING: return
 	
-	if event.is_action_pressed("b_move_right"):
+	if event.is_action_pressed("move_right_block"):
 		move_grid(Vector2.RIGHT)
-	elif event.is_action_pressed("b_move_left"):
+	elif event.is_action_pressed("move_left_block"):
 		move_grid(Vector2.LEFT)
-	elif event.is_action_pressed("b_rotate"):
+	elif event.is_action_pressed("rotate_block"):
 		rotate_grid()
 
 func move_grid(direction: Vector2):

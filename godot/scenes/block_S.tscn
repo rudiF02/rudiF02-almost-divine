@@ -19,3 +19,6 @@ texture = ExtResource("2_1nifk")
 [node name="Sprite2D4" type="Sprite2D" parent="." index="3"]
 position = Vector2(32, -32)
 texture = ExtResource("2_1nifk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="4"]
+polygon = PackedVector2Array(-16, -48, 48, -48, 48, -16, 16, -16, 16, 16, -48, 16, -48, -16, -16, -16)

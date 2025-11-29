@@ -15,3 +15,6 @@ texture = ExtResource("2_koms6")
 [node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
 position = Vector2(0, 32)
 texture = ExtResource("2_koms6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3"]
+polygon = PackedVector2Array(-16, -48, 16, -48, 16, 48, -16, 48)

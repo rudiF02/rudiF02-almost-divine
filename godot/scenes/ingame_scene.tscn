@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=7 format=3 uid="uid://cik30de5gaaah"]
 
 [ext_resource type="Script" uid="uid://ovjegpk30m4h" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="3_8o178"]
 [ext_resource type="PackedScene" uid="uid://djh2rlgqlc427" path="res://scenes/Background_scenaries.tscn" id="5_2577t"]
 [ext_resource type="PackedScene" uid="uid://vsj0ca6ifthk" path="res://scenes/player.tscn" id="5_gadrd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2577t"]
+distance = -10.0
 
 [node name="IngameScene" type="Node2D"]
 script = ExtResource("1_objyc")
@@ -24,3 +27,10 @@ visible = false
 position = Vector2(-269, -949)
 
 [node name="Player" parent="." instance=ExtResource("5_gadrd")]
+
+[node name="PavementArea" type="Area2D" parent="."]
+collision_mask = 137
+
+[node name="Pavement" type="CollisionShape2D" parent="PavementArea"]
+position = Vector2(21, 3)
+shape = SubResource("WorldBoundaryShape2D_2577t")

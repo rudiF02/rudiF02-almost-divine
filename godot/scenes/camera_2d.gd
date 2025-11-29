@@ -24,7 +24,7 @@ func _ready():
 		# Calculate the height of the visible world area
 		var visible_world_height = viewport_rect.y / zoom_factor
 		
-		var top_edge_y = -(visible_world_height / 2.0) - 64.0
+		var top_edge_y = -(visible_world_height * 3) - 64.0
 		
 		spawner_node.position = Vector2(0, top_edge_y)
 		

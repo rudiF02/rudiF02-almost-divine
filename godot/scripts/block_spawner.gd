@@ -17,8 +17,8 @@ extends Node2D
 # Load your 16x16 textures
 # Adjust paths to match your actual folders
 var tex_hell = preload("res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png")
-# var tex_purgatory = preload("res://Assets/Purgatory/block_purgatory.png")
-# var tex_heaven = preload("res://Assets/Heaven/block_heaven.png")
+var tex_purgatory = preload("res://Asset/background 2/purgatory_block.png")
+var tex_heaven = preload("res://Asset/Clouds_white/cloud_shape4_1.png")
 
 # --- INITIALIZATION ---
 func _ready():
@@ -49,10 +49,10 @@ func spawn_new_block():
 	var current_y = global_position.y
 	var selected_texture = tex_hell # Default (Bottom)
 	
-	#if current_y < -2000:
-		#selected_texture = tex_heaven
-	#elif current_y < -1000:
-		#selected_texture = tex_purgatory
+	if current_y < -2000:
+		selected_texture = tex_heaven
+	elif current_y < -1000:
+		selected_texture = tex_purgatory
 	#
 	# 5. APPLY THEME
 	if new_block.has_method("apply_visual_theme"):

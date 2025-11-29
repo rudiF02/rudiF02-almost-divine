@@ -19,12 +19,12 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		print(collider)
 		if "current_state" in collider:
 			
 			if collider.current_state == BLOCK_STATE_FALLING:
 				print("Touched a falling block - DIE")
 				die()
+				
 			
 
 

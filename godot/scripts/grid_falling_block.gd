@@ -14,7 +14,7 @@ var current_tick_speed = TICK_SPEED
 func _physics_process(delta):
 	if current_state == State.LOCKED: return
 
-	if Input.is_action_pressed("b_fast_fall"):
+	if Input.is_action_pressed("b_fast_move"):
 		current_tick_speed = FAST_DROP_SPEED
 	else:
 		current_tick_speed = TICK_SPEED
@@ -69,7 +69,7 @@ func lock_block():
 	collision_layer = 8 # Layer 4
 	collision_mask = 0
 	
-	# Notify Spawner
+	# Notify Spawnerdd
 	get_tree().call_group("Spawner", "on_block_locked")
 
 func apply_visual_theme(new_texture: Texture2D):

@@ -18,7 +18,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
-collision_mask = 137
+collision_mask = 153
 script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -39,12 +39,13 @@ libraries = {
 scale = Vector2(0.25, 0.25)
 offset = Vector2(0, -160)
 ignore_rotation = false
-limit_enabled = false
+limit_left = -152
+limit_right = 168
 script = ExtResource("3_dqkch")
 
 [node name="BlockSpawner" parent="Camera2D" instance=ExtResource("4_qlg0r")]
 
 [node name="PlayerShip1Blue" type="Sprite2D" parent="."]
-position = Vector2(10.750001, 16)
+position = Vector2(8.000001, 16)
 scale = Vector2(0.32828286, 0.4266667)
 texture = ExtResource("4_dqkch")

@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://stnnmbl1dj4a"]
+
+[ext_resource type="Script" uid="uid://bt4uhbs8emnax" path="res://scenes/game_over.gd" id="1_xeevv"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 41.0
+offset_bottom = 41.0
+scale = Vector2(15.023907, 22.501932)
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15217325, 0.15217325, 0.15217325, 0.34901962)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 4.999998
+offset_top = -3.0
+offset_right = 57.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.32997987, 0.38588205)
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 24.0
+offset_bottom = 15.0
+
+[node name="Label" type="Label" parent="Control/Button"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 25.0
+scale = Vector2(0.1060901, 0.12825212)
+text = "QUIT"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://vhlnds1asin3"]
+
+[ext_resource type="Script" uid="uid://dpo1naox8c0o3" path="res://scripts/beatrice_platform.gd" id="1_87483"]
+[ext_resource type="Texture2D" uid="uid://bgi4apda8v8vk" path="res://Asset/beatrice.png" id="2_rgdff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu4p8"]
+atlas = ExtResource("2_rgdff")
+region = Rect2(0, 0, 30, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qth2k"]
+atlas = ExtResource("2_rgdff")
+region = Rect2(30, 0, 30, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4bey"]
+atlas = ExtResource("2_rgdff")
+region = Rect2(60, 0, 30, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdd7u"]
+atlas = ExtResource("2_rgdff")
+region = Rect2(30, 0, 30, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_agck3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu4p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qth2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4bey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdd7u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BeatricePlatform" type="StaticBody2D"]
+script = ExtResource("1_87483")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_agck3")
+animation = &"idle"
+frame_progress = 0.91674846
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

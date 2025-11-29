@@ -31,7 +31,7 @@ func spawn_new_block():
 	if block_scenes.is_empty():
 		print("Error: No scenes assigned to Spawner!")
 		return
-	
+	print("Block spawned at " + str(global_position.y))
 	# 1. Instantiate a random block
 	var new_block = block_scenes.pick_random().instantiate()
 	

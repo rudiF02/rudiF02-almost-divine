@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://eg58vjsjnt44" path="res://scenes/block_spawner.tscn" id="4_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(32, 30.5)
+size = Vector2(8, 30.5)
 
 [sub_resource type="Animation" id="Animation_g2els"]
 resource_name = "idle"

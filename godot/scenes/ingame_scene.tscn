@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=6 format=3 uid="uid://cik30de5gaaah"]
 
 [ext_resource type="Script" uid="uid://ovjegpk30m4h" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="3_8o178"]
-[ext_resource type="PackedScene" uid="uid://852a1w1soti0" path="res://scenes/dev_scene.tscn" id="6_gadrd"]
+[ext_resource type="PackedScene" uid="uid://djh2rlgqlc427" path="res://scenes/Background_scenaries.tscn" id="5_2577t"]
+[ext_resource type="PackedScene" uid="uid://vsj0ca6ifthk" path="res://scenes/player.tscn" id="5_gadrd"]
 
 [node name="IngameScene" type="Node2D"]
 script = ExtResource("1_objyc")
@@ -19,4 +20,7 @@ unique_name_in_owner = true
 process_mode = 2
 visible = false
 
-[node name="devScene" parent="." instance=ExtResource("6_gadrd")]
+[node name="BackgroundScenaries" parent="." instance=ExtResource("5_2577t")]
+position = Vector2(-269, -949)
+
+[node name="Player" parent="." instance=ExtResource("5_gadrd")]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://852a1w1soti0"]
+
+[ext_resource type="Script" uid="uid://cr1gacmkbixt1" path="res://scripts/dev_scene.gd" id="1_a52dm"]
+[ext_resource type="Script" uid="uid://621js30ngrhg" path="res://scenes/game_manager.gd" id="2_1v7hd"]
+
+[node name="devScene" type="Node2D" groups=["Spawner"]]
+script = ExtResource("1_a52dm")
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("2_1v7hd")

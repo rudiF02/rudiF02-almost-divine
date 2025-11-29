@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtx11h5njfwl6"]
+
+[ext_resource type="PackedScene" uid="uid://5l4khjvgwxn" path="res://scenes/base_block.tscn" id="1_4a7oq"]
+[ext_resource type="Texture2D" uid="uid://dtcx8dnrcbtbf" path="res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png" id="2_mqetu"]
+
+[node name="Block_J" instance=ExtResource("1_4a7oq")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_mqetu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, -32)
+texture = ExtResource("2_mqetu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
+position = Vector2(0, 32)
+texture = ExtResource("2_mqetu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." index="3"]
+position = Vector2(-32, 32)
+texture = ExtResource("2_mqetu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="4"]
+polygon = PackedVector2Array(-16, -48, 16, -48, 16, 48, -48, 48, -48, 16, -16, 16)

@@ -12,6 +12,8 @@ extends Node2D
 	preload("res://scenes/block_L.tscn"),
 ]
 
+
+
 # Load your 16x16 textures
 # Adjust paths to match your actual folders
 var tex_hell = preload("res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png")
@@ -29,7 +31,7 @@ func spawn_new_block():
 	if block_scenes.is_empty():
 		print("Error: No scenes assigned to Spawner!")
 		return
-
+	
 	# 1. Instantiate a random block
 	var new_block = block_scenes.pick_random().instantiate()
 	

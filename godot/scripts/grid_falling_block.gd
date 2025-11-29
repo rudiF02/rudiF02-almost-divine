@@ -10,6 +10,7 @@ var current_state = State.FALLING
 var time_since_last_tick = 0.0
 var current_tick_speed = TICK_SPEED
 
+
 func _physics_process(delta):
 	if current_state == State.LOCKED: return
 
@@ -19,6 +20,10 @@ func _physics_process(delta):
 		current_tick_speed = TICK_SPEED
 		
 	time_since_last_tick += delta
+	
+	# controlla la posizione
+	# se <= 0 allora incrocia con il top
+		# se state.locked allora perso
 	
 	if time_since_last_tick >= current_tick_speed:
 		time_since_last_tick = 0

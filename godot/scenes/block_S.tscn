@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtcx8dnrcbtbf" path="res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png" id="2_1nifk"]
 
 [node name="Block_S" instance=ExtResource("1_ju0hu")]
+collision_layer = 136
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_1nifk")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://eg58vjsjnt44"]
+
+[ext_resource type="Script" uid="uid://c5dv0fnbkf5e7" path="res://scripts/block_spawner.gd" id="1_aogsa"]
+
+[node name="BlockSpawner" type="Node2D" groups=["Spawner"]]
+script = ExtResource("1_aogsa")

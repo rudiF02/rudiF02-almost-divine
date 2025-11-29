@@ -1,20 +1,62 @@
-[gd_scene load_steps=8 format=3 uid="uid://vsj0ca6ifthk"]
+[gd_scene load_steps=13 format=3 uid="uid://vsj0ca6ifthk"]
 
 [ext_resource type="Script" uid="uid://cm58x12yxfdvu" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c2kr1loc1b7ml" path="res://scenes/camera_2d.gd" id="3_dqkch"]
-[ext_resource type="Texture2D" uid="uid://v4l1gaiqicou" path="res://playerShip1_blue.png" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://2ljitluxmjdm" path="res://Asset/dante.png" id="4_dqkch"]
 [ext_resource type="PackedScene" uid="uid://eg58vjsjnt44" path="res://scenes/block_spawner.tscn" id="4_qlg0r"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(0, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(144, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(0, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(48, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(96, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(144, 64, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2wvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(8, 30.5)
-
-[sub_resource type="Animation" id="Animation_g2els"]
-resource_name = "idle"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
-_data = {
-&"idle": SubResource("Animation_g2els")
-}
+size = Vector2(10, 32)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -26,15 +68,6 @@ z_index = 2
 hframes = 4
 vframes = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11, 15.75)
-shape = SubResource("RectangleShape2D_g2els")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_qhqgy")
-}
-
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.25, 0.25)
 offset = Vector2(0, -160)
@@ -44,7 +77,12 @@ script = ExtResource("3_dqkch")
 
 [node name="BlockSpawner" parent="Camera2D" instance=ExtResource("4_qlg0r")]
 
-[node name="PlayerShip1Blue" type="Sprite2D" parent="."]
-position = Vector2(10.750001, 16)
-scale = Vector2(0.32828286, 0.4266667)
-texture = ExtResource("4_dqkch")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d2wvv")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.18641797
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 6)
+shape = SubResource("RectangleShape2D_g2els")

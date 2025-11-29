@@ -43,3 +43,6 @@ func die():
 	if is_dead: return
 	is_dead = true
 	print("Game Over")
+	set_physics_process(false)
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

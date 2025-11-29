@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtcx8dnrcbtbf" path="res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png" id="2_lwffi"]
 
 [node name="Block_O" instance=ExtResource("1_0dqyc")]
+collision_mask = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 position = Vector2(-16, -16)

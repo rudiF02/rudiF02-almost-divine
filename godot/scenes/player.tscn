@@ -34,9 +34,7 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
-offset = Vector2(0, -100)
 ignore_rotation = false
 zoom = Vector2(1.5, 1.5)
 script = ExtResource("3_dqkch")

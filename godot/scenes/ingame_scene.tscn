@@ -13,6 +13,7 @@ distance = -10.0
 script = ExtResource("1_objyc")
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="FadeOverlay" parent="UI" instance=ExtResource("1_y6ebv")]
 unique_name_in_owner = true
@@ -32,5 +33,5 @@ position = Vector2(-269, -949)
 collision_mask = 137
 
 [node name="Pavement" type="CollisionShape2D" parent="PavementArea"]
-position = Vector2(21, 3)
+position = Vector2(0, 12)
 shape = SubResource("WorldBoundaryShape2D_2577t")

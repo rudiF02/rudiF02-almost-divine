@@ -36,5 +36,5 @@ collision_mask = 137
 
 [node name="Pavement" type="CollisionShape2D" parent="PavementArea"]
 z_index = 4
-position = Vector2(3.5, 3)
+position = Vector2(3, 0)
 shape = SubResource("WorldBoundaryShape2D_2577t")

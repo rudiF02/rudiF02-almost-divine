@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://13p4yyp7eabh"]
 
 [ext_resource type="PackedScene" uid="uid://5l4khjvgwxn" path="res://scenes/base_block.tscn" id="1_vjljj"]
-[ext_resource type="Texture2D" uid="uid://cfgnr55yk0qsb" path="res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_16x16.png" id="2_vfh2s"]
+[ext_resource type="Texture2D" uid="uid://dtcx8dnrcbtbf" path="res://Asset/Starter Tiles Platformer/FireTiles/Fire_14_32x32.png" id="2_vfh2s"]
 
 [node name="Block_L" instance=ExtResource("1_vjljj")]
 
@@ -9,13 +9,13 @@
 texture = ExtResource("2_vfh2s")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
-position = Vector2(0, -16)
+position = Vector2(0, -32)
 texture = ExtResource("2_vfh2s")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
-position = Vector2(0, 16)
+position = Vector2(0, 32)
 texture = ExtResource("2_vfh2s")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." index="3"]
-position = Vector2(16, 16)
+position = Vector2(32, 32)
 texture = ExtResource("2_vfh2s")

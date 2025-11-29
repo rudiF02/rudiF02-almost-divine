@@ -6,7 +6,7 @@ extends Node2D
 	preload("res://scenes/block_I.tscn"),
 	preload("res://scenes/block_J.tscn"),
 	preload("res://scenes/block_T.tscn"),
-	preload("res://scenes/block_O.tscn"),
+	#preload("res://scenes/block_O.tscn"), #YOU DON'T DESERVE TO BE HERE
 	preload("res://scenes/block_S.tscn"),
 	preload("res://scenes/block_Z.tscn"),
 	preload("res://scenes/block_L.tscn"),

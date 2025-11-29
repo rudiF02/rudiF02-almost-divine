@@ -12,6 +12,7 @@
 script = ExtResource("1_objyc")
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="FadeOverlay" parent="UI" instance=ExtResource("1_y6ebv")]
 unique_name_in_owner = true

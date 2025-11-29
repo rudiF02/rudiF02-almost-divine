@@ -1,10 +1,8 @@
 extends Camera2D
 
-# Adjust this to the horizontal center of your map (e.g., 0 or 160)
 @export var fixed_x_position: float = 0.0
 
-# The exact width of your map in pixels.
-@export var target_map_width: float = 160.0
+@export var target_map_width: float = 320.0
 
 # Drag your BlockSpawner node here in the Inspector
 @onready var spawner_node: Node2D = $BlockSpawner

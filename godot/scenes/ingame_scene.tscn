@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://vsj0ca6ifthk" path="res://scenes/player.tscn" id="5_gadrd"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2577t"]
-distance = -10.0
 
 [node name="IngameScene" type="Node2D"]
 script = ExtResource("1_objyc")
@@ -27,10 +26,14 @@ visible = false
 position = Vector2(-269, -949)
 
 [node name="Player" parent="." instance=ExtResource("5_gadrd")]
+z_index = 4
+position = Vector2(-1, -33)
 
-[node name="PavementArea" type="Area2D" parent="."]
+[node name="PavementArea" type="StaticBody2D" parent="."]
+collision_layer = 9
 collision_mask = 137
 
 [node name="Pavement" type="CollisionShape2D" parent="PavementArea"]
-position = Vector2(21, 3)
+z_index = 4
+position = Vector2(3.5, 3)
 shape = SubResource("WorldBoundaryShape2D_2577t")
